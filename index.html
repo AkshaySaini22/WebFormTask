@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 7</title>
+    <link rel="stylesheet" href="css/site.css">
+    <link href="js/main.js">
+</head>
+
+<body>
+    <header>
+        <h1>Lab 7 : Web Form</h1>
+        <h3 style="color: red;">
+            Fields with * are required.
+        </h3>
+    </header>
+    <section>
+        <form id="survey" action="https://formspree.io/f/xoqrlean" method="post">
+            <fieldset id="PersonalInfo">
+                <legend>Your Personal Information</legend>
+                <div class="formRow">
+                    <label for="name">Full Name*</label>
+                    <input name="fullName" id="name" type="text" placeholder="first and last name" required />
+                </div>
+
+                </div>
+                <div class="formRow">
+                    <label for="email">E-mail*</label>
+                    <input name="Email" id="email" type="email" required placeholder="someone@somewhere.com"/>
+                </div>
+
+                <div class="formRow">
+                    <label for="currentStudy">Current Study</label>
+                    <input name="CurrentStudy" id="currentStudy" type="text" value="Douglas college"/>
+                </div>
+                <div class="formRow">
+                    <label for="age">Age</label>
+                    <input name="age" id="age" type="number" value="20" />
+                </div>
+
+            </fieldset>
+
+            <fieldset id="expInfo">
+                <legend>Your Quiz</legend>
+
+                <div class="formRow">
+                    <label for="que1">1. what is the result of the following equation?</label><br>
+                    <div class="formRow">
+                        <label>2<sup>2</sup>*5=</label>
+                        <input name="ans1" id="ans1" type="text" />
+                    </div>
+                    
+                </div>
+
+                <div class="formRow">
+                    <label for="que2">2. What does the acronym W3C stands for?</label>
+                    <select name="ans2" id="order">
+                        <option value="3rd World War Coalition" selected>3rd World War Coalition</option>
+                        <option value="World Wide WarCraft">World Wide WarCraft</option>
+                        <option value="World Wide Web Consortium">World Wide Web Consortium</option>
+                    </select>
+                </div>
+                <div class="formRow">
+                    <label for="que3">3. CSS is an abbrevation of </label>
+                    <input name="ans3" id="ans3" type="text" />
+                    <label>style sheet</label>
+                </div>
+
+                <div class="formRow">
+                    <label for="que4">4. Select all the (scripting) languages we learn in CSIS 1280?</label>
+                    <fieldset class="optGroup1">
+                        <input name="ans4" id="ans4Html" type="checkbox" value="HTML" />
+                        <label for="oHtml">HTML</label>
+                        <input name="ans4" id="ans4cCss" type="checkbox" value="CSS" />
+                        <label for="oCss">CSS</label>
+                        <input name="ans4" id="ans4cJavaScript" type="checkbox" value="JavaScript"/>
+                        <label for="oJavaScript">JavaScript</label>
+                        <input name="ans4" id="ans4cPHP" type="checkbox" value="PHP" />
+                        <label for="oPHP">PHP</label>
+                        <input name="ans4" id="ans4cCsharp" type="checkbox" value="C#" />
+                        <label for="oCsharp">C#</label>
+                        <input name="ans4" id="ans4cJava" type="checkbox" value="Java"/>
+                        <label for="oJava">Java</label>
+                    </fieldset>
+                </div>
+
+                <div class="formRow">
+                    <label>5. Consider the picture of a DOM structure below. Which of the following selector
+                        <strong>CANNOT</strong> be used to select all the &lt;p&gt; elements?</p></label>
+                        <div class="formRow1">
+                            <fieldset class="optGroup">
+                                <input name="ans5" id="que5Op1" value="p" type="radio" />
+                                <label for="hP1">p</label><br>
+                                <input name="ans5" id="que5Op2" value="h1 ~ p" type="radio" />
+                                <label for="hP2">h1 ~ p</label><br>
+                                <input name="ans5" id="que5Op3" value="article p" type="radio" />
+                                <label for="hP3">article p</label><br>
+                                <input name="ans5" id="que5Op4" value="article ~ p" type="radio" />
+                                <label for="hP4">article ~ p</label><br>
+                                <input name="ans5" id="que5Op5" value="h1+ p" type="radio" />
+                                <label for="hP5">h1+ p</label>
+                            </fieldset>
+                            <img src="images/q5.PNG">
+                        </div>
+                    
+                </div>
+                <div class="formRow">
+                    <label>6. Consider the picture of a DOM structure below. Which of the following selector
+                        <strong>CAN</strong> be used to select all the &lt;li&gt; elements?</p></label>
+                        <div class="formRow1">
+                            <fieldset class="optGroup">
+                                <input name="ans6" id="que6Op1" value="li" type="radio" />
+                                <label for="hP1">li</label><br>
+                                <input name="ans6" id="que6Op2" value="h1 ~ p" type="radio" />
+                                <label for="hP2">li:nth-child(2n+1)</label><br>
+                                <input name="ans6" id="que6Op3" value="article p" type="radio" />
+                                <label for="hP3">ul > li:(2n+1)</label><br>
+                                <input name="ans6" id="que6Op4" value="article ~ p" type="radio" />
+                                <label for="hP4">ul>li</label><br>
+                                <input name="ans6" id="que6Op5" value="h1+ p" type="radio" />
+                                <label for="hP5">ul >li(2n+1) </label>
+                            </fieldset>
+                            <img src="images/q6.PNG">
+                        </div>
+                    
+                </div>
+                <div class="formRow1">
+                    <label for="que7">7. Douglas college and the coquitlam campus was named after the former governor
+                        and Liutenant-Governor of British Columbia. What are their names?</label>
+                    <textarea name="ans7" id="ans7"></textarea>
+                </div>
+            </fieldset>
+
+            <div id="buttons">
+                <input type="submit" value="Submit My Survey" />
+                <input type="reset" value="Cancel" />
+            </div>
+        </form>
+    </section>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
